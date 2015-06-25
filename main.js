@@ -3,7 +3,7 @@ var fs = require("fs"),
     url = require('url'),
     markdown = require( "markdown" ).markdown;
 
-http.createServer(responseHandler).listen(8000);
+http.createServer(responseHandler).listen(process.env.PORT);
 
 function responseHandler(req, res) {
   if (req.url.match("fav")) {
